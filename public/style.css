@@ -1,0 +1,69 @@
+@import url(/fonts.css);
+
+body {
+  padding: 0;
+  margin: 0;
+  color: #b1b7ba;
+  line-height: 1.75;
+  background-color: #0C0F10;
+  font-family: "Instrument Sans", Arial;
+}
+
+#title:focus {
+  border: none;
+  outline: none;
+  /* border-bottom: 1px solid rgba(250, 65, 255, 1); */
+}
+
+.upsun-gradient {
+  background: linear-gradient(90deg,rgba(250, 65, 255, 1) 0%,rgba(96, 70, 255, 1) 75%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+#content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  -webkit-column-gap: 1.25rem;
+  column-gap: 1.25rem;
+  row-gap: 0;
+  width: calc(100% - 2.5rem);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  color: white;
+  text-align: center;
+}
+
+h2 {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  color: white;
+  text-align: center;
+}
+
+div.chart:nth-child(odd) {
+  grid-column: 3 / 6;
+}
+
+div.chart:nth-child(even) {
+  grid-column: 7 / 11;
+}
+
+div.chart {
+  justify-content: center;
+}
+
+canvas {
+  display: inline-block;
+}
+
+#chart3 {
+  max-height: 400px;
+}

@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  h1= title
+  h2
+    | Hi
+    =  ' '
+    span(class="upsun-gradient", id="title", contentEditable="true") everyone
+    =  ', '
+    | here is your dashboard:
+  div(class="chart")
+    h3 New sales
+    canvas(id="chart1")
+  div(class="chart")
+    h3 Subscribers
+    canvas(id="chart2")
+  div(class="chart")
+    h3 Sales by region
+    canvas(id="chart3")
+  div(class="chart")
+    h3 ACV
+    canvas(id="chart4")
+  //- div
+  //-   canvas(id="chart4")
+
+  script(src='/js.js')
+  script(src='https://cdn.jsdelivr.net/npm/chart.js')
+  script(src='/charts.js')

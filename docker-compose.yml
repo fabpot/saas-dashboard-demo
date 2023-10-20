@@ -1,0 +1,17 @@
+version: '3.1'
+
+services:
+
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: secret
+    ports:
+      - 5432:5432
+  # app:
+  #   image: node:18
+  #   ports:
+  #     - 3000:3000
+  #   volumes:
+  #     - ${PWD}:/app
+  #   entrypoint: ["npm", "run", "dev"]
