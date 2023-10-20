@@ -7,7 +7,7 @@ const port = process.env.PORT || 3000
 const indexRouter = require('./routes/index');
 const apiRouter = require('./routes/api');
 
-const appName = require('./package.json').name;
+const appName = process.env.PLATFORM_APPLICATION_NAME || 'saas-dashboard-demo'
 
 const query = require('./utilities/pgquery');
 
